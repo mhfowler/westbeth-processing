@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<h2>
+   sketchbook
+</h2>
+
+<p>
+   {% for f in relative_paths %}
+   <div>
+      <a href="{{f}}">{{f}}</a>
+   </div>
+   {% endfor %}
+</p>
+
+</body>
+
+</html>
