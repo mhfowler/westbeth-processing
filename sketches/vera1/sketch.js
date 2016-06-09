@@ -12,6 +12,11 @@ function mouseClicked() {
     return false;
 }
 
+function touchStarted() {
+    refreshScreen();
+    return false;
+}
+
 function refreshScreen() {
     clear();
     var dis_width=width;
