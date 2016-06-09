@@ -2,13 +2,13 @@ import os
 import jinja2
 
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
-index_file_path = os.path.join(PROJECT_PATH, 'index.html')
 
-INDEX_DIRS = ['generative', 'p5']
+ALL_INDEX_DIRS = ['sketches']
 
 
-def build_template():
+def build_template(index_dirs, output):
 
+    index_file_path = os.path.join(PROJECT_PATH, output)
     template_path = os.path.join(PROJECT_PATH, 'templates')
     template_loader = jinja2.FileSystemLoader(searchpath=template_path)
     template_env = jinja2.Environment( loader=template_loader)
@@ -17,7 +17,7 @@ def build_template():
 
     fileSet = set()
     search_dirs = []
-    for d in INDEX_DIRS:
+    for d in index_dirs:
         search_dirs.append(os.path.join(PROJECT_PATH, d))
 
     for rootDir in search_dirs:
@@ -41,4 +41,4 @@ def build_template():
 
 
 if __name__ == '__main__':
-    build_template()
+    build_template(index_dirs=ALL_INDEX_DIRS, output='index.html')
