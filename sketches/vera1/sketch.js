@@ -32,7 +32,6 @@ function setup() {
     textAlign(CENTER);
     textFont("Avenir");
     text('start typing', windowWidth / 2.0, windowHeight / 2.0);
-    refreshScreen();
 }
 
 function draw() {
