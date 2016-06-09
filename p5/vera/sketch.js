@@ -1,0 +1,21 @@
+function randInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function keyReleased() {
+    clear();
+  var dis_width=width;
+  var dis_height=height;
+  for (i = 0; i < 100; i++) {
+    line(randInt(0, dis_width), randInt(0, dis_height), randInt(0, dis_width), randInt(0, dis_height));
+  }
+  return false; // prevent any default behavior
+}
+
+function setup() {
+ createCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+
+}
