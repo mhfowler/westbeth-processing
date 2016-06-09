@@ -2,9 +2,9 @@ import os
 import jinja2
 
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
-index_file_path = os.path.join(PROJECT_PATH, 'local_index.html')
+index_file_path = os.path.join(PROJECT_PATH, 'index.html')
 
-INDEX_DIRS = ['generative, p5']
+INDEX_DIRS = ['generative', 'p5']
 
 
 def build_template():
