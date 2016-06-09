@@ -26,17 +26,13 @@ function refreshScreen() {
     }
 }
 
-// var myFont;
-// function preload() {
-//   myFont = loadFont('../assets/test.otf');
-// }
-
 function setup() {
     createCanvas(windowWidth, windowHeight);
     textSize(32);
     textAlign(CENTER);
     textFont("Avenir");
     text('start typing', windowWidth / 2.0, windowHeight / 2.0);
+    refreshScreen();
 }
 
 function draw() {
