@@ -10,7 +10,7 @@
 ## download repository and install requirements
 ```
 cd ~/Desktop
-git clone <your repository name> 
+git clone <your repository link from above> 
 cd ~/Desktop/westbeth
 pip install -r requirements.txt
 ```
