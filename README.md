@@ -2,12 +2,6 @@
 
 # setup
 
-## fork the repository
-- visit https://github.com/mhfowler/westbeth
-- click fork
-- click 'Clone or Download', copy link (should look like git@github.com:yourname/westbeth.git)
-
-## download repository and install requirements
 ```
 cd ~/Desktop
 git clone <your repository link from above> 
