@@ -4,7 +4,7 @@
 
 ```
 cd ~/Desktop
-git clone <your repository link from above> 
+git clone <your forked repository> 
 cd ~/Desktop/westbeth
 pip install -r requirements.txt
 ```
