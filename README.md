@@ -5,7 +5,7 @@
 ## fork the repository
 - visit https://github.com/mhfowler/westbeth
 - click fork
-- click 'Clone or Download', copy link (should look like git@github.com:mhfowler/westbeth.git)
+- click 'Clone or Download', copy link (should look like git@github.com:yourname/westbeth.git)
 
 ## download repository and install requirements
 ```
