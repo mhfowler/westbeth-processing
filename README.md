@@ -25,5 +25,3 @@ pip install -r requirements.txt
 
 ### deploy code to github pages
 ```cd ~/Desktop/westbeth; ./deploy.sh```
-
-### view code on github pages
