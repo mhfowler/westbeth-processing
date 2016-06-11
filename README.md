@@ -2,9 +2,15 @@
 
 # setup
 
+## fork the repository
+visit https://github.com/mhfowler/westbeth
+click fork
+click 'Clone or Download', copy link (should look like git@github.com:mhfowler/westbeth.git)
+
+## download repository and install requirements
 ```
 cd ~/Desktop
-git clone git@github.com:mhfowler/westbeth.git
+git clone <your repository name> 
 cd ~/Desktop/westbeth
 pip install -r requirements.txt
 ```
@@ -20,3 +26,4 @@ pip install -r requirements.txt
 ### deploy code to github pages
 ```cd ~/Desktop/westbeth; ./deploy.sh```
 
+### view code on github pages
