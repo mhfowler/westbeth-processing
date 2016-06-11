@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
-shopt -s expand_aliases
-. ~/.bash_profile
+PROJECT_PATH=$( cd $(dirname $0) ; pwd -P )
 
-vir westbeth
+if [ "$#" -ne 1 ]; then
+   read -p "sketch name:" SNAME
+else
+   SNAME=$1
+fi
 
-echo "sketch name: "
-read -p "sketch name:" sname
-python new_sketch.py $sname
+
+mkdir $PROJECT_PATH/sketches/$SNAME
+SKETCH_PATH=$PROJECT_PATH/sketches/$SNAME
+cp $PROJECT_PATH/sketches/template/template.html $SKETCH_PATH/$SNAME.html
+cp $PROJECT_PATH/sketches/template/sketch.js $SKETCH_PATH/sketch.js
+
+echo "created new sketch in $SKETCH_PATH"
