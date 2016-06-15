@@ -7,6 +7,7 @@ function keyReleased() {
     return false; // prevent any default behavior
 }
 
+
 function mouseClicked() {
     refreshScreen();
     return false;
