@@ -34,7 +34,7 @@ var num_triangles = 1;
 // var max_triangle_size = 20;
 var max_triangle_size = 2;
 var translatex = 0;
-var growthspeed = 1;
+var growthspeed = 10;
 
 
 function calcWave() {
@@ -159,10 +159,25 @@ last_update = 0;
 function drawFunction() {
 
     // grow triangles
-    which_direction = theta*growthspeed %16;
-    triangle_growth = theta*growthspeed %8;
-    console.log(max_triangle_size);
-    console.log(triangle_growth);
+    var growth_max = 50;
+    growthspeed = 5;
+    var rest_period = 6*growthspeed;
+    var mod_theta = theta*growthspeed % ((growth_max * 2) + rest_period);
+    console.log('which_direction: ' + String(mod_theta));
+    if (mod_theta < growth_max) {
+        // console.log('grow');
+        triangle_growth = mod_theta; 
+    }
+    else if (mod_theta < growth_max*2) {
+        // console.log('shrink');
+        triangle_growth = growth_max - (mod_theta % growth_max);
+    }
+    else {
+        // console.log('same');
+    }
+    triangle_growth = max(triangle_growth, 1);
+    triangle_growth = triangle_growth * triangle_growth;
+    console.log('triangle_growth: ' + String(triangle_growth));
     for (var i = 0; i < original_triangles.length; i++) {
         var orig_triangles = original_triangles[i];
         var c_triangles = triangles[i];
@@ -180,7 +195,6 @@ function drawFunction() {
     }
 
     updateFromMouse();
-    console.log(max_triangle_size);
     push();
     // translate(translatex, 0);
     // rotate(PI/2.0);
